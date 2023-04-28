@@ -8,8 +8,8 @@ let x = setInterval(function() {
     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
     document.querySelector('#time').innerHTML = days + ' Giorni ' + hours + ' Ore ' + minutes + ' Minuti ' + seconds + ' Secondi ';
 
-    if (distance = 0) {
+    if (distance <= 0) {
         clearInterval(x);
-        document.querySelector('#time').innerHTM = 'Il tempo è scaduto!!!'
+        document.querySelector('#time').innerHTML = 'Il tempo è scaduto!!!'
     }
 },1000);
